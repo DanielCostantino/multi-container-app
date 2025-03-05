@@ -33,6 +33,10 @@ services:
       - database:/data/db
     ports:
       - 27017:27017
+# The volumes element that is nested in todo-database tells Compose to mount the volume named database to /data/db 
+# in the container for the todo-database service.
 
-#volumes:
-  #database:
+volumes:
+  database:
+
+#The top-level volumes element defines and configures a volume named database that can be used by any of the services in the Compose file.
